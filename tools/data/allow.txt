@@ -1,0 +1,12 @@
+# Words to force INTO the dictionary, whatever WordNet says.
+#
+# This exists so that judgement calls can be settled by editing a list rather
+# than by changing the filtering logic. Add a word here if it is a legitimate,
+# established English word that the WordNet pass wrongly dropped -- most often
+# a common noun that WordNet only records as a proper-noun instance.
+#
+# One word per line, lowercase, 3-27 letters. Trailing # comments are allowed.
+
+# Caught by the -er/-est comparative check but not actually comparatives.
+modest   # not a superlative of "mod"
+outer    # a word in its own right, not the comparative of "out"

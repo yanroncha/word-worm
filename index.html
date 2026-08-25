@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b1a18" />
+    <title>Word Worm</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div id="app">
+      <header id="hud">
+        <div class="score" data-player="P1">
+          <span class="score__name">Player 1</span>
+          <span class="score__value" id="score-p1">0</span>
+        </div>
+
+        <div class="hud__middle">
+          <p class="turn" id="turn">Player 1 to play</p>
+          <div class="hud__buttons">
+            <button type="button" id="give-up">Give up</button>
+            <button type="button" id="toggle-net">Unfold</button>
+          </div>
+        </div>
+
+        <div class="score" data-player="P2">
+          <span class="score__name">Player 2</span>
+          <span class="score__value" id="score-p2">0</span>
+        </div>
+      </header>
+
+      <main id="stage">
+        <canvas id="cube"></canvas>
+        <canvas id="net" hidden></canvas>
+        <div id="cross" class="cross" aria-hidden="true"></div>
+        <p id="message" class="message" role="status"></p>
+      </main>
+
+      <footer id="entry" class="entry" hidden>
+        <form id="entry-form" class="entry__form" autocomplete="off">
+          <span class="entry__hint" id="entry-hint"></span>
+          <input
+            id="entry-input"
+            class="entry__input"
+            type="text"
+            inputmode="latin"
+            autocapitalize="off"
+            autocorrect="off"
+            spellcheck="false"
+            maxlength="27"
+            aria-label="Word"
+          />
+          <button type="submit" id="entry-play">Play</button>
+          <button type="button" id="entry-cancel">Cancel</button>
+        </form>
+      </footer>
+
+      <section id="result" class="result" hidden>
+        <div class="result__card">
+          <h1 class="result__title">Game over</h1>
+          <p class="result__winner" id="result-winner"></p>
+          <div class="result__scores" id="result-scores"></div>
+          <h2 class="result__heading">Words played</h2>
+          <ol class="result__words" id="result-words"></ol>
+          <button type="button" id="result-new">New game</button>
+        </div>
+      </section>
+
+      <div id="loading" class="loading">Loading dictionary...</div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

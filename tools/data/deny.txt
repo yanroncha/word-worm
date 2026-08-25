@@ -1,0 +1,11 @@
+# Words to force OUT of the dictionary, whatever WordNet says.
+#
+# WordNet gives a handful of inflected-looking forms their own entry. Some of
+# those are genuinely established words and should stay (sightseeing, glasses,
+# scissors). Others feel like plain inflections to a player and can be removed
+# here without touching the filtering logic.
+#
+# Kept deliberately empty by default: every removal makes the game stricter than
+# WordNet, so each line should be a considered decision rather than a reflex.
+#
+# One word per line, lowercase. Trailing # comments are allowed.
